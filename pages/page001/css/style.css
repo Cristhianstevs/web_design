@@ -1,0 +1,181 @@
+@charset "UTF-8";
+
+:root {
+    --cor01: #15181d;
+    --cor02: #171a1f;
+    --cor03: #1c1f24;
+    --cor04: #21282e;
+    --cor05: #373b3f;
+    --tamanho_lateral01: 60px;
+    --tamanho_lateral02: 80px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--cor03);
+    max-width: 1350px;
+    margin: auto;
+    color: #fff;
+}
+
+#casca {
+    background-image: url(../img/background02.png);
+    background-repeat: no-repeat;
+    height: 500px;
+    width: 1000px;
+    z-index: -1;
+    position: absolute;
+    transform: translate(-500px, -100px) rotate(140deg) scale(130%);
+}
+
+
+
+
+
+/* Header */
+
+    header #cabecalho {
+        display: flex;
+        justify-content: end;
+        list-style: none;
+        margin: 35px var(--tamanho_lateral01);
+    }
+    header #cabecalho #select {
+        color: #fff;
+    }
+    header #cabecalho a {
+        margin: 0 30px;
+        color: #ffffff50;
+        text-decoration: none;
+    }
+    header #cabecalho a:hover {
+        color: #fff;
+        transition: .5s;
+    }
+    
+/* /Header */
+
+
+
+
+/* Main */
+
+    main {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    /* parte01 */
+
+        main #parte01 {
+            max-width: 1100px;
+            background-color: var(--cor02);
+            color: #fff;
+            margin: 40px var(--tamanho_lateral02);
+            padding: 50px;
+            display: flex;
+            box-shadow: 0 0 5px 5px #00000060;
+            box-shadow: 0 0 10px 10px #00000060;
+            box-shadow: 0 0 15px 15px #00000060;
+            box-shadow: 0 0 20px 20px #00000060;
+        }
+        
+
+        /* tema */
+
+            main #parte01 #tema {
+                width: 100%;
+            }
+            main #parte01 #tema img {
+                filter: invert(100%);
+                height: 20px;
+                margin-right: 5px;
+                transform: translateY(3px);
+            }
+            main #parte01 #tema span {
+                font-size: 20px;
+            }
+            main #parte01 #tema h1 {
+                font-size: 4em;
+                width: 500px;
+                margin: 20px 0;
+            }
+            main #parte01 #tema .demo {
+                display: flex;
+            }
+            main #parte01 #tema .demo .img_demo img {
+                filter: invert(0);
+                margin-right: 20px;
+                width: 130px;
+                height: 130px;
+            }
+        
+        /* /tema */
+
+        /* descricao */
+            
+            main #parte01 #descricao {
+                padding-left: 80px;
+            }
+            main #parte01 #descricao p {
+                line-height: 35px;
+                color: #ffffff80;
+                max-width: 900px;
+                font-size: 1.1em;
+                margin-bottom: 35px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            main #parte01 #descricao .botao {
+                display: flex;
+                justify-content: center;
+            }
+            main #parte01 #descricao .botao button {
+                text-align: center;
+                width: 100%;
+                height: 60px;
+                border: none;
+                border-radius: 1px;
+                color: #fff;
+                background-color: var(--cor04);
+                font-size: 15px;
+            }
+            main #parte01 #descricao .botao button:hover {
+                cursor: pointer;
+                background-color: var(--cor05);
+            }
+
+        /* /descricao */
+    /* /parte01 */
+    
+    /* Raiz */
+
+        #raiz {
+            background-image: url(../img/roots02.png);
+            background-repeat: no-repeat;
+            height: 400px;
+            width: 500px;
+            z-index: 1;
+            position: absolute;
+            transform: translate(786px, 210px) scale(125%);
+        }
+
+    /* /Raiz */
+
+    /* parte02 */
+
+        #parte02 {
+            margin: var(--tamanho_lateral02);
+            display: flex;
+            justify-content: center;
+        }
+        #parte02 .titulo {
+            font-size: 2em;
+        }
+
+    /* /parte02 */
+
