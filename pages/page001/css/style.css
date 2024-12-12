@@ -20,32 +20,31 @@
 
 /* globais */
 
-    * {
-        margin: 0;
-        padding: 0;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+        }
 
-    body {
-        background-color: var(--cor01);
-        max-width: 1350px;
-        margin: auto;
-        color: #fff;
-    }
-
-    #casca {
-        background-image: url(../img/background06.png);
-        background-repeat: no-repeat;
-        height: 500px;
-        width: 1000px;
-        z-index: 1;
-        position: absolute;
-        transform: translate(-500px, -100px) rotate(140deg) scale(130%);
-    }
-
-/* /globais*/
-
-
-
+        body {
+            background-color: var(--cor01);
+            max-width: 1350px;
+            margin: auto;
+            color: #fff;
+        }
+    
+/* /globais */
+    
+    
+    
+#casca {
+    background-image: url(../img/background06.png);
+    background-repeat: no-repeat;
+    height: 500px;
+    width: 1000px;
+    z-index: 1;
+    position: absolute;
+    transform: translate(-500px, -100px) rotate(140deg) scale(130%);
+}
 
 
 /* Header */
@@ -185,7 +184,7 @@
             width: 500px;
             z-index: 3;
             position: absolute;
-            transform: translate(362px, -900px) scale(125%);
+            transform: translate(362px, -800px) scale(125%);
         }
 
     /* /Raiz */
@@ -202,7 +201,7 @@
             width:500px;
             position: absolute;
             z-index: 1;
-            transform: translate(320px, -350px);
+            transform: translate(300px, -200px);
         }
 
     /* /casca2 */
@@ -229,7 +228,7 @@
     /* titulo */
 
         main .titulo {
-            margin: 160px;
+            margin: 160px 160px 100px 160px;
             font-size: 2em;
             text-align: center;
             z-index: 2;
@@ -250,6 +249,7 @@
             width: 700px;
             padding: 50px;
             box-shadow: 0 0 5px 0 #00000070;
+            margin-top: 60px;
         }
         
         /* tipos */
@@ -312,7 +312,7 @@
                         background-size: cover;
                         width: 333px;
                         height: 472px;
-                        box-shadow: 0 0 5px 5px #00000050;
+                        box-shadow: 0 0 5px 5px #000000f0;
                         box-shadow: 0 0 10px 10px #00000050;
                         box-shadow: 0 0 20px 20px #00000050;
                         box-shadow: 0 0 30px 30px #00000050;
@@ -432,18 +432,79 @@
             background-image: url(../img/base12.png);
             background-repeat: no-repeat;
             background-size: cover;
-            width: 800px;
+            position: absolute;
+            z-index: 1;
+            width: 700px;
             height: 646px;
-            transform: translate(-275px, -100px);
+            transform: translate(-325px, 1040px);
         }
     /* /fundo */
 
 
     /* parte03 */
+        
+        main #parte03 {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+            justify-content: space-around;
+            z-index: 2;
+            width: 800px;
+        }
 
         /* materiais */
 
+            main #parte03 .materiais {
+                height: 180px;
+                width: 180px;
+                border-radius: 50%;
+                margin: 15px;
+                overflow: hidden;
+                box-shadow: 0 0 5px 5px #00000050;
+                box-shadow: 0 0 10px 10px #00000050;
+                box-shadow: 0 0 20px 20px #00000050;
+            }
+            
+            /* textura (geral) */
+
+                main #parte03 .materiais div {
+                    background-position: center center;
+                    background-size: cover;
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 50%;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    font-size: 1.2em;
+                    font-weight: 500;
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
+                    align-items: center;
+                    text-shadow: 0 0 4px #000;
+                    transition: transform 0.2s ease-in-out;
+                }
+                main #parte03 .materiais div:hover {
+                    cursor: pointer;
+                    transform: scale(1.1);
+                }
+                main #parte03 .materiais div p {
+                    transition: .2s ease-in-out;
+                }
+                
+                main #parte03 .materiais div:hover p {
+                    font-size: .9em;
+                    transition: .2s ease-in-out;
+                }
+                
+            /* /textura (geral) */
+
+
+
             /* textura01 */
+
+                main #parte03 .materiais #textura01 {
+                    background-image: url(../img/img_maple_wood_cut.jpg);
+                }
 
             /* /textura01 */
 
@@ -451,11 +512,19 @@
 
             /* textura02 */
 
+                main #parte03 .materiais #textura02 {
+                    background-image: url(../img/img_walnut_wood_cut.jpg);
+                }
+
             /* /textura02 */
 
 
 
             /* textura03 */
+
+                main #parte03 .materiais #textura03 {
+                    background-image: url(../img/img_cherry_wood_cut.jpeg);
+                }
 
             /* /textura03 */
 
@@ -463,11 +532,19 @@
 
             /* textura04 */
 
+                main #parte03 .materiais #textura04 {
+                    background-image: url(../img/img_pine_wood_cut.jpeg);
+                }
+
             /* /textura04 */
 
 
 
             /* textura05 */
+
+                main #parte03 .materiais #textura05 {
+                    background-image: url(../img/img_oak_wood_cut.jpg);
+                }
 
             /* /textura05 */
 
@@ -475,11 +552,99 @@
 
             /* textura06 */
 
+                main #parte03 .materiais #textura06 {
+                    background-image: url(../img/img_cedar_wood_cut.jpg);
+                }
+
             /* /textura06 */
 
         /* /materiais */
 
     /* /parte03 */
+
+
+
+
+
+    /* parte04 */
+
+        main #parte04 {
+            z-index: 2;
+            margin-top: 200px;
+            padding: 60px;
+            display: flex;
+            justify-content: center;
+            width: 600px;
+            box-shadow: 0 0 5px 5px #00000050;
+            box-shadow: 0 0 10px 10px #00000050;
+            box-shadow: 0 0 20px 20px #00000050;
+            box-shadow: 0 0 40px 40px #00000050;
+        }
+
+        /* contato */
+
+            main #parte04 .contato {
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                flex-direction: column;
+                width: 100%;
+            }
+            main #parte04 .contato h1 {
+                font-size: 3em;
+                margin-bottom: 30px;
+            }
+
+            /* info */
+            
+                main #parte04 .contato .info {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                }
+
+                main #parte04 .contato .info div {
+                }
+                
+                /* info_pessoais */
+                
+                main #parte04 .contato .info .info_pessoais {
+                    display: flex;
+                    justify-content: space-between;
+                    color: #fff;
+                }
+                main #parte04 .contato .info .info_pessoais input {
+                        background-color: var(--cor01);
+                        padding: 12px;
+                        width: calc(50% - 35px);
+                        margin-bottom: 20px;
+                        border: none;
+                        outline: none;
+                    }
+                    
+                /* /info_pessoais */
+
+
+                
+                /* mensagem */
+
+                main #parte04 .contato .info .mensagem textarea {
+                        background-color: var(--cor01);
+                        padding: 12px;
+                        border: none;
+                        width: calc(100% - 25px);
+                        height: 100px;
+                        resize: none;
+                        outline: none;
+                    }
+
+                /* /mensagem */
+                
+            /* /info */
+
+        /* /contato */
+
+    /* /parte04 */
 
 /* /Main */
 
@@ -491,6 +656,7 @@
 
     footer {
         background-color: var(--cor03);
+        height: 500px;
     }
 
 /* /Footer */
