@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+/* Animação de Underline - Esquerda para Direita | Direita para Esqurda */
+/* Para que a animação funcine atribua a classe "animated-underline-02" à tag desejada */
+
+.animated-underline-02 {
+    text-decoration: none;
+    color: #ffffff80;
+    position: relative;
+    display: inline-block;
+    z-index: 2;
+}
+.animated-underline-02::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    background-color: #fff;
+    left: 0;
+    bottom: -3px;
+    transition: width 0.4s ease-in-out;
+}
+.animated-underline-02:hover::after {
+    width: 100%;
+    left: 0;
+}

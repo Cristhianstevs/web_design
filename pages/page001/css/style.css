@@ -63,10 +63,12 @@
         margin: 0 30px;
         color: #ffffff50;
         text-decoration: none;
+        transition: .2s ease-in-out;
     }
     header #cabecalho a:hover {
         color: #fff;
         transition: .5s;
+        transition: .2s ease-in-out;
     }
     
 /* /Header */
@@ -80,7 +82,7 @@
     main {
         background-color: var(--cor03);
         display: flex;
-        z-index: -2;
+        position: relative;
         justify-content: center;
         align-items: center;
         flex-direction: column;
@@ -110,7 +112,6 @@
                 width: 100%;
             }
             main #parte01 #tema img {
-                filter: invert(100%);
                 height: 20px;
                 margin-right: 5px;
                 transform: translateY(3px);
@@ -163,16 +164,20 @@
                 color: #fff;
                 background-color: var(--cor04);
                 font-size: 15px;
+                transition: .2s ease-in-out;
             }
             main #parte01 #descricao .botao button:hover {
                 cursor: pointer;
                 background-color: var(--cor05);
+                transition: .2s ease-in-out;
             }
 
         /* /descricao */
 
     /* /parte01 */
-    
+
+
+
 
 
     /* Raiz */
@@ -184,7 +189,7 @@
             width: 500px;
             z-index: 3;
             position: absolute;
-            transform: translate(362px, -1050px) scale(125%);
+            transform: translate(362px, -1150px) scale(125%);
         }
 
     /* /Raiz */
@@ -201,7 +206,7 @@
             width:500px;
             position: absolute;
             z-index: 1;
-            transform: translate(300px, -470px);
+            transform: translate(300px, -550px);
         }
 
     /* /casca2 */
@@ -235,6 +240,8 @@
         }
 
     /* titulo */
+
+
 
 
 
@@ -427,6 +434,9 @@
     /* /parte02 */
 
 
+
+
+
     /* fundo */
         main #fundo {
             background-image: url(../img/base12.png);
@@ -436,9 +446,12 @@
             z-index: 1;
             width: 700px;
             height: 646px;
-            transform: translate(-325px, 920px);
+            transform: translate(-325px, 860px);
         }
     /* /fundo */
+
+
+
 
 
     /* parte03 */
@@ -566,11 +579,29 @@
 
 
 
+    /* casca4 */
+        main #casca4 {
+            background-image: url(../img/base15.png);
+            background-size: cover;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+            height: 700px;
+            width: 700px;
+            transform: translateY(150px); /* Tamanho do footer (height) */
+        }
+    /* /casca4 */
+
+
+
+
+
     /* parte04 */
 
         main #parte04 {
             z-index: 2;
-            margin-top: 200px;
+            margin: 200px 0 30px 0;
             padding: 60px;
             display: flex;
             justify-content: center;
@@ -603,22 +634,20 @@
                     flex-direction: column;
                     width: 100%;
                 }
-
-                main #parte04 .contato .info div {
-                }
                 
                 /* info_pessoais */
                 
-                main #parte04 .contato .info .info_pessoais {
-                    display: flex;
-                    justify-content: space-between;
-                    color: #fff;
-                }
-                main #parte04 .contato .info .info_pessoais input {
+                    main #parte04 .contato .info .info_pessoais {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                    main #parte04 .contato .info .info_pessoais input {
                         background-color: var(--cor01);
-                        padding: 12px;
-                        width: calc(50% - 35px);
+                        color: #ffffff80;
+                        padding: 20px;
+                        width: calc(50% - 45px);
                         margin-bottom: 20px;
+                        border-radius: 2px;
                         border: none;
                         outline: none;
                     }
@@ -629,12 +658,15 @@
                 
                 /* mensagem */
 
-                main #parte04 .contato .info .mensagem textarea {
+                    main #parte04 .contato .info .mensagem textarea {
                         background-color: var(--cor01);
-                        padding: 12px;
+                        color: #ffffff80;
+                        padding: 20px;
+                        border-radius: 2px;
                         border: none;
-                        width: calc(100% - 25px);
+                        width: calc(100% - 40px);
                         height: 100px;
+                        margin-bottom: 20px;
                         resize: none;
                         outline: none;
                     }
@@ -642,6 +674,26 @@
                 /* /mensagem */
                 
             /* /info */
+
+
+
+            /* enviar */
+                main #parte04 .contato #enviar button {
+                    width: 100%;
+                    padding: 20px;
+                    background-color: var(--cor04);
+                    color: #fff;
+                    font-weight: 500;
+                    border-radius: 2px;
+                    border: none;
+                    transition: .2s ease-in-out;
+                }
+                main #parte04 .contato #enviar button:hover {
+                    background-color: var(--cor05);
+                    cursor: pointer;
+                    transition: .2s ease-in-out;
+                }
+            /* /enviar */
 
         /* /contato */
 
@@ -657,7 +709,55 @@
 
     footer {
         background-color: var(--cor03);
-        height: 100px;
+        height: 150px;
+        z-index: -2;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
     }
+    footer a {
+        color: #ffffff80;
+        text-decoration: none;
+        margin: 20px;
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: .7em;
+        transition: .2s ease-in-out;
+    }
+    footer a:hover {
+        transition: .2s ease-in-out;
+        color: #fff;
+    }
+    
+    /* redes */
+    
+        footer #redes {
+            z-index: 1;
+            width: 100%;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+        }
+        footer #redes a {
+            text-decoration: none;
+            display: block;
+            height: 40px;
+            width: 40px;
+        }
+        footer #redes a img {
+            height: 40px;
+            width: 40px;
+            filter: invert(50%);
+            transition: .2s ease-in-out;
+        }
+        footer #redes a img:hover {
+            filter: invert(0);
+            transition: .2s ease-in-out;
+        }
+
+    /* /redes */
 
 /* /Footer */
